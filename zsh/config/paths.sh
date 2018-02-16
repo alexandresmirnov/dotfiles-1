@@ -12,7 +12,7 @@ elif [[ $OSTYPE == darwin* ]]; then
 fi
 
 # additional autocompletions
-fpath=($HOME/.dotfiles/cheat/cheat.zsh $fpath)
+fpath=($HOME/.dotfiles/zsh/fpaths $fpath)
 
 # Go Definitions
 export GOPATH=$HOME/go

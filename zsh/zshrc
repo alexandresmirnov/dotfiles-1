@@ -34,7 +34,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ## oh-my-zsh config ##
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 
-ZSH_THEME="ys" # theme for oh-my-zsh. Currently loading ys from $OMZ/custom/themes
+ZSH_THEME="" # theme for oh-my-zsh. Currently loading ys from $OMZ/custom/themes
 
 plugins=(git git-extras zsh-completions alias-tips history brew brew-cask common-aliases osx tmux taskwarrior fasd extract adb k vagrant)
 
@@ -51,3 +51,8 @@ done
 
 # Load local config if present, for final overrides.
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# experiments with pure
+autoload -U promptinit; promptinit
+prompt pure
+
