@@ -27,3 +27,4 @@
 
 - shell:
   - [printf "\n" | vim +PlugInstall +PlugUpdate +qall, Installing vim plugins]
+  - [cd ~/.vim/plugged/YouCompleteMe && ./install.py --clang-completer --go-completer --js-completer]

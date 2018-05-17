@@ -46,6 +46,10 @@ Plug 'https://github.com/tpope/vim-eunuch'
 " Awesome navigation
 Plug 'https://github.com/justinmk/vim-sneak'
 
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "" Basics
@@ -61,6 +65,10 @@ set backspace=indent,eol,start  " make that backspace key work the way it should
 "set background=dark             " Use colours that work well on a dark background (Console is usually black)
 "set showmode                    " show the current mode
 "set clipboard=unnamed           " set clipboard to unnamed to access the system clipboard under windows
+" enable modelines for script support and snippets.
+"  see: http://vim.wikia.com/wiki/Modeline_magic
+set modeline
+set modelines=5
 
 
 "" Leader
@@ -183,6 +191,11 @@ function! s:Repl()
     return "p@=RestoreRegister()\<cr>"
 endfunction
 vmap <silent> <expr> p <sid>Repl()
+
+" snippets
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger  = '<C-k>'
 
 " ansible config
 let g:ansible_unindent_after_newline = 1
